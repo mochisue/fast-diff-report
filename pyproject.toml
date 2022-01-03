@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "src"
+version = "0.1.0"
+description = "Create diff html like difflib using google's diff_match_patch"
+authors = ["mochisue <motoki32925@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+diff-match-patch = "^20200713"
+dominate = "^2.6.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = {version = "^21.12b0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
