@@ -223,8 +223,9 @@ class FastDiffReport(diff_match_patch.diff_match_patch):
                     last_new_html_text = new_html_lines.pop(-1)
             if context:
                 if flag == self.DIFF_EQUAL:
-                    if len(lines) > 5:
-                        omit_rows.append((len(old_plain_lines) - len(lines) + 2, len(old_plain_lines) - 2))
+                    if len(old_lines) > 5:
+                        omit_rows.append((len(old_plain_lines) - len(old_lines) + 4, len(old_plain_lines) - 2))
+
         else:
             old_plain_lines.append(last_old_plain_text)
             old_html_lines.append(last_old_html_text)
